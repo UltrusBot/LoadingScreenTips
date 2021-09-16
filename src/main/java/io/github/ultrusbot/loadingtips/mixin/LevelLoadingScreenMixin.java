@@ -39,13 +39,11 @@ public abstract class LevelLoadingScreenMixin extends Screen {
         List<OrderedText> wrappedText = textRenderer.wrapLines(new TranslatableText(randomTip), width/3);
         int textY = this.height-this.textRenderer.fontHeight;
         for (int i = wrappedText.size() - 1; i >= 0; i--) {
-//        for (OrderedText orderedText : wrappedText) {
             OrderedText orderedText = wrappedText.get(i);
             textRenderer.draw(matrices, orderedText, 0, textY, 16777215);
             textY -= textRenderer.fontHeight * 1.25f;
 
         }
         drawTextWithShadow(matrices, this.textRenderer, new TranslatableText("text.loadingtips.tip"),0, textY, 3847130);
-//        drawTextWithShadow(matrices, this.textRenderer, new TranslatableText(randomTip),0, this.height-this.textRenderer.fontHeight*3, 16777215);
     }
 }
