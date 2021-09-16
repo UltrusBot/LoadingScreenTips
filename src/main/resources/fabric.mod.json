@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "loadingtips",
+  "version": "${version}",
+  "name": "Loading Tips",
+  "description": "Adds loading tips to the world loading screen.",
+  "authors": [
+    "UltrusBot"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/loadingtips/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.ultrusbot.loadingtips.client.LoadingTipsClient"
+    ],
+    "main": [
+      "io.github.ultrusbot.loadingtips.LoadingTips"
+    ]
+  },
+  "mixins": [
+    "loadingtips.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": "*",
+    "minecraft": "1.17.1"
+  }
+}

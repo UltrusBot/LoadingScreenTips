@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "tips": [
+    "text.loadingtips.tip.nether_bed",
+    "text.loadingtips.tip.milk",
+    "text.loadingtips.iron_golem",
+    "text.loading_tips.dirt_sugarcane",
+    "text.loading_tips.dig_straight_down",
+    "text.loading_tips.scared_creepers",
+    "text.loading_tips.endermen_eyes",
+    "text.loading_tips.herobrine",
+    "text.loading_tips.illager_bell"
+  ]
+}
