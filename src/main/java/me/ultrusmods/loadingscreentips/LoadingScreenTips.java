@@ -1,4 +1,4 @@
-package io.github.ultrusbot.loadingscreentips;
+package me.ultrusmods.loadingscreentips;
 
 import net.fabricmc.api.ModInitializer;
 

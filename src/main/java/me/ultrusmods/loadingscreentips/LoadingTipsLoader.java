@@ -1,4 +1,4 @@
-package io.github.ultrusbot.loadingscreentips;
+package me.ultrusmods.loadingscreentips;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;

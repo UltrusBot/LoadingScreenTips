@@ -1,4 +1,4 @@
-package io.github.ultrusbot.loadingscreentips;
+package me.ultrusmods.loadingscreentips;
 
 import com.google.gson.*;
 import net.minecraft.util.JsonHelper;

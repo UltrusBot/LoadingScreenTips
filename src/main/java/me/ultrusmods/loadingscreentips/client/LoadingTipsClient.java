@@ -1,6 +1,6 @@
-package io.github.ultrusbot.loadingscreentips.client;
+package me.ultrusmods.loadingscreentips.client;
 
-import io.github.ultrusbot.loadingscreentips.LoadingTipsLoader;
+import me.ultrusmods.loadingscreentips.LoadingTipsLoader;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

@@ -1,6 +1,6 @@
-package io.github.ultrusbot.loadingscreentips.mixin;
+package me.ultrusmods.loadingscreentips.mixin;
 
-import io.github.ultrusbot.loadingscreentips.LoadingScreenTips;
+import me.ultrusmods.loadingscreentips.LoadingScreenTips;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.WorldGenerationProgressTracker;

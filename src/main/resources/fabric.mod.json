@@ -17,10 +17,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "io.github.ultrusbot.loadingscreentips.client.LoadingTipsClient"
+      "me.ultrusmods.loadingscreentips.client.LoadingTipsClient"
     ],
     "main": [
-      "io.github.ultrusbot.loadingscreentips.LoadingScreenTips"
+      "me.ultrusmods.loadingscreentips.LoadingScreenTips"
     ]
   },
   "mixins": [
