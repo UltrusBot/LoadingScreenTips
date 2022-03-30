@@ -25,7 +25,7 @@ public abstract class LevelLoadingScreenMixin extends Screen {
         super(text);
     }
     private String randomTip;
-    float tipTimer = 0f;
+        float tipTimer = 0f;
     @Inject(method = "<init>", at = @At("TAIL"))
     void pickRandomTip(WorldGenerationProgressTracker worldGenerationProgressTracker, CallbackInfo ci) {
         randomTip = LoadingScreenTips.getRandomTip();
@@ -34,7 +34,8 @@ public abstract class LevelLoadingScreenMixin extends Screen {
     @Inject(method = "render", at = @At("TAIL"))
     void drawLoadingTip(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         tipTimer+=delta;
-        if (tipTimer >= 50F) {
+        //TODO: Add config to change this value.
+        if (tipTimer >= 100F) {
             randomTip = LoadingScreenTips.getRandomTip();
             tipTimer = 0;
         }
