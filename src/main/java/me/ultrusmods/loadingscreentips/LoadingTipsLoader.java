@@ -40,7 +40,6 @@ public class LoadingTipsLoader extends JsonDataLoader implements IdentifiableRes
                 }
             }
         }));
-    System.out.println(LoadingScreenTips.TIPS);
     }
 
 }
