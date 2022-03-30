@@ -1,4 +1,4 @@
-package io.github.ultrusbot.loadingtips;
+package io.github.ultrusbot.loadingscreentips;
 
 import com.google.gson.*;
 import net.minecraft.util.JsonHelper;
@@ -29,7 +29,7 @@ public final class LoadingTip {
 
         @Override
         public LoadingTip deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-            JsonObject jsonObject = JsonHelper.asObject(json, "loadingtips");
+            JsonObject jsonObject = JsonHelper.asObject(json, "loadingscreentips");
             List<String> tips = new ArrayList<>();
             boolean replace = JsonHelper.getBoolean(jsonObject, "replace", false);
             JsonHelper.getArray(jsonObject, "tips").iterator().forEachRemaining(jsonElement -> {

@@ -1,6 +1,8 @@
-package io.github.ultrusbot.loadingtips.mixin;
+package io.github.ultrusbot.loadingscreentips.mixin;
 
-import io.github.ultrusbot.loadingtips.LoadingTips;
+import io.github.ultrusbot.loadingscreentips.LoadingScreenTips;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.WorldGenerationProgressTracker;
 import net.minecraft.client.gui.screen.LevelLoadingScreen;
 import net.minecraft.client.gui.screen.Screen;
@@ -15,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
-
+@Environment(EnvType.CLIENT)
 @Mixin(LevelLoadingScreen.class)
 public abstract class LevelLoadingScreenMixin extends Screen {
 
@@ -26,14 +28,14 @@ public abstract class LevelLoadingScreenMixin extends Screen {
     float tipTimer = 0f;
     @Inject(method = "<init>", at = @At("TAIL"))
     void pickRandomTip(WorldGenerationProgressTracker worldGenerationProgressTracker, CallbackInfo ci) {
-        randomTip = LoadingTips.getRandomTip();
+        randomTip = LoadingScreenTips.getRandomTip();
     }
 
     @Inject(method = "render", at = @At("TAIL"))
     void drawLoadingTip(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
         tipTimer+=delta;
         if (tipTimer >= 50F) {
-            randomTip = LoadingTips.getRandomTip();
+            randomTip = LoadingScreenTips.getRandomTip();
             tipTimer = 0;
         }
         List<OrderedText> wrappedText = textRenderer.wrapLines(new TranslatableText(randomTip), width/3);
@@ -44,6 +46,6 @@ public abstract class LevelLoadingScreenMixin extends Screen {
             textY -= textRenderer.fontHeight * 1.25f;
 
         }
-        drawTextWithShadow(matrices, this.textRenderer, new TranslatableText("text.loadingtips.tip"),0, textY, 3847130);
+        drawTextWithShadow(matrices, this.textRenderer, new TranslatableText("text.loadingscreentips.tip"),0, textY, 3847130);
     }
 }
