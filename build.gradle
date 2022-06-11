@@ -21,7 +21,12 @@ repositories {
         name 'Quilt Snapshots'
         url 'https://maven.quiltmc.org/repository/snapshot'
     }
+    maven { url = "https://jitpack.io" }
+    maven {
+        url = "https://api.modrinth.com/maven"
+    }
 }
+
 
 dependencies {
     // To change the versions see the gradle.properties file
@@ -33,6 +38,8 @@ dependencies {
 
     // Fabric API.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    //TODO: Config next update
+//    modImplementation include("maven.modrinth:midnightlib:${project.midnightlib_version}")
 }
 
 processResources {
