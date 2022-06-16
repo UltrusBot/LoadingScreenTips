@@ -9,6 +9,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -38,7 +39,7 @@ public abstract class LevelLoadingScreenMixin extends Screen {
             randomTip = LoadingScreenTips.getRandomTip();
             tipTimer = 0;
         }
-        List<OrderedText> wrappedText = textRenderer.wrapLines(Text.translatable(randomTip), width/3);
+        List<OrderedText> wrappedText = textRenderer.wrapLines(new TranslatableText(randomTip), width/3);
         int textY = this.height-this.textRenderer.fontHeight;
         for (int i = wrappedText.size() - 1; i >= 0; i--) {
             OrderedText orderedText = wrappedText.get(i);
@@ -46,6 +47,6 @@ public abstract class LevelLoadingScreenMixin extends Screen {
             textY -= textRenderer.fontHeight * 1.25f;
 
         }
-        drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"),0, textY, 3847130);
+        drawTextWithShadow(matrices, this.textRenderer, new TranslatableText("text.loadingscreentips.tip"),0, textY, 3847130);
     }
 }
