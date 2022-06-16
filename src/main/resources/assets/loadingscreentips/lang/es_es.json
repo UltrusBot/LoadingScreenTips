@@ -67,5 +67,8 @@
 	"text.loadingscreentips.horses": "Los Caballos son una forma rápida de viajar por este vasto mundo, y puedes criarlos para obtener incluso mejores caballos.",
 	"text.loadingscreentips.deepslate": "Cuando estés a más de 60 metros bajo el mar, toda la piedra es reemplazada por Pizarra Profunda, la cual es más duradera que la piedra normal",
 	"text.loadingscreentips.large_ore_vein": "Puedes encontrarte vetas gigantes de hierro y cobre en las zonas más profundas del mundo.",
-	"text.loadingscreentips.bedrock_nether": "Las partes más altas y bajas del Nether están cubiertas de Piedra base, un bloque irrompible."
+	"text.loadingscreentips.bedrock_nether": "Las partes más altas y bajas del Nether están cubiertas de Piedra base, un bloque irrompible.",
+
+    "modmenu.summaryTranslation.loadingscreentips": "Adds loading tips to the world loading screen.",
+    "modmenu.descriptionTranslation.loadingscreentips": "Adds loading tips to the world loading screen."
 }
