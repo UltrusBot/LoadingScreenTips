@@ -12,7 +12,11 @@ public class LoadingScreenTips implements ModInitializer {
     public static final Random RANDOM_TIP = new Random();
 
     public static String getRandomTip() {
-        return TIPS.get(RANDOM_TIP.nextInt(TIPS.size()));
+        if (TIPS.size() > 0) {
+            return TIPS.get(RANDOM_TIP.nextInt(TIPS.size()));
+        } else {
+            return "";
+        }
     }
 
 
