@@ -3,6 +3,9 @@ plugins {
     id 'maven-publish'
     id 'io.github.juuxel.loom-quiltflower' version '1.6.0'
     id 'org.quiltmc.quilt-mappings-on-loom' version '4.0.0'
+    id "com.github.breadmoirai.github-release" version "2.4.1"
+    id "com.modrinth.minotaur" version "2.+"
+    id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -25,6 +28,9 @@ repositories {
     maven {
         url = "https://api.modrinth.com/maven"
     }
+    maven {
+        url "https://maven.terraformersmc.com/"
+    }
 }
 
 
@@ -39,7 +45,9 @@ dependencies {
     // Fabric API.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     //TODO: Config next update
-//    modImplementation include("maven.modrinth:midnightlib:${project.midnightlib_version}")
+    modImplementation include("maven.modrinth:midnightlib:${project.midnightlib_version}")
+
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {
@@ -66,6 +74,56 @@ jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}"}
     }
+}
+
+githubRelease {
+    if (System.getenv("GH_TOKEN") != null) {
+        authorization = "Token ${System.getenv("GH_TOKEN")}"
+    }
+    owner = "UltrusBot"
+    repo = "LoadingScreenTips"
+    targetCommitish = "1.19"
+    tagName = "v${project.version}"
+    body = new File("$rootDir/CHANGELOG.md").getText('UTF-8')
+    releaseAssets = [remapJar, remapSourcesJar]
+}
+
+modrinth {
+    if (System.getenv("MODRINTH_TOKEN") != null) {
+        token = System.getenv("MODRINTH_TOKEN")
+    }
+    projectId = "loadingscreentips"
+    versionType = "release"
+    versionName = "Loading Screen Tips v${project.version}"
+    uploadFile = remapJar
+    changelog = new File("$rootDir/CHANGELOG.md").getText('UTF-8')
+    versionName = "Loading Screen Tips v${project.version}"
+    gameVersions = ["1.19.2"]
+    loaders = ["quilt", "fabric"]
+    dependencies {
+        embedded.project "midnightlib"
+    }
+    syncBodyFrom = rootProject.file("README.md").text
+}
+
+
+
+curseforge {
+    if (System.getenv("CF_API_KEY") != null) {
+        apiKey = System.getenv("CF_API_KEY")
+
+    }
+    project {
+        id = "527804"
+        changelogType = "markdown"
+        changelog = new File("$rootDir/CHANGELOG.md").getText('UTF-8')
+        releaseType = "release"
+        addGameVersion "1.19.2"
+        mainArtifact(remapJar) {
+            displayName = "Loading Screen Tips v${project.version}"
+        }
+    }
+
 }
 
 // configure the maven publication

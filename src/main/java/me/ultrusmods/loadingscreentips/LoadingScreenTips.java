@@ -1,5 +1,7 @@
 package me.ultrusmods.loadingscreentips;
 
+import eu.midnightdust.lib.config.MidnightConfig;
+import me.ultrusmods.loadingscreentips.config.LoadingScreenTipsConfig;
 import net.fabricmc.api.ModInitializer;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 public class LoadingScreenTips implements ModInitializer {
-    public static final String MOD_ID = "loadingscreentips" ;
+    public static final String MOD_ID = "loadingscreentips";
     public static List<String> TIPS = new ArrayList<>();
     public static final Random RANDOM_TIP = new Random();
 
@@ -22,6 +24,6 @@ public class LoadingScreenTips implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
+        MidnightConfig.init(MOD_ID, LoadingScreenTipsConfig.class);
     }
 }

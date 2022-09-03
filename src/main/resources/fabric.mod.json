@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "loadingscreentips",
   "version": "${version}",
-  "name": "Loading Tips",
+  "name": "Loading Screen Tips",
   "description": "Adds loading tips to the world loading screen.",
   "authors": [
     "UltrusBot"
@@ -29,6 +29,6 @@
   "depends": {
     "fabricloader": ">=0.13.3",
     "fabric": "*",
-    "minecraft": "*"
+    "minecraft": "1.19.x"
   }
 }

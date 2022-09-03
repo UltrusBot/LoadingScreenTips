@@ -67,6 +67,25 @@
     "text.loadingscreentips.horses",
     "text.loadingscreentips.deepslate",
     "text.loadingscreentips.large_ore_vein",
-    "text.loadingscreentips.bedrock_nether"
+    "text.loadingscreentips.bedrock_nether",
+    "text.loadingscreentips.deep_dark",
+    "text.loadingscreentips.swift_sneak",
+    "text.loadingscreentips.frog_magmacubes",
+    "text.loadingscreentips.sculk",
+    "text.loadingscreentips.allay",
+    "text.loadingscreentips.frog_types",
+    "text.loadingscreentips.sculk_catalyst",
+    "text.loadingscreentips.wool_occlusion",
+    "text.loadingscreentips.frog_breeding",
+    "text.loadingscreentips.warden",
+    "text.loadingscreentips.dripstone_clay",
+    "text.loadingscreentips.dupe_allay",
+    "text.loadingscreentips.villager",
+    "text.loadingscreentips.sculk_shriekers",
+    "text.loadingscreentips.build_snowgolem",
+    "text.loadingscreentips.leather_boots",
+    "text.loadingscreentips.shulker_bullet",
+    "text.loadingscreentips.enchantability",
+    "text.loadingscreentips.saturation"
   ]
 }
