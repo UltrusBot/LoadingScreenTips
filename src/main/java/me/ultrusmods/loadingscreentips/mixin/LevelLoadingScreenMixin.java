@@ -5,8 +5,8 @@ import me.ultrusmods.loadingscreentips.config.LoadingScreenTipsConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.WorldGenerationProgressTracker;
-import net.minecraft.client.gui.screen.LevelLoadingScreen;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.screen.WorldLoadingScreen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
@@ -21,7 +21,7 @@ import java.util.List;
 //TODO: Rewrite this
 
 @Environment(EnvType.CLIENT)
-@Mixin(LevelLoadingScreen.class)
+@Mixin(WorldLoadingScreen.class)
 public abstract class LevelLoadingScreenMixin extends Screen {
 
     protected LevelLoadingScreenMixin(Text text) {
