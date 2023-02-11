@@ -97,7 +97,8 @@
   "loadingscreentips.midnightconfig.enum.CORNER.BOTTOM_LEFT" : "Bottom Left",
   "loadingscreentips.midnightconfig.enum.CORNER.TOP_LEFT" : "Top Left",
   "loadingscreentips.midnightconfig.enum.CORNER.BOTTOM_RIGHT" : "Bottom Right",
-  "loadingscreentips.midnightconfig.enum.CORNER.TOP_RIGHT" : "Top Right"
+  "loadingscreentips.midnightconfig.enum.CORNER.TOP_RIGHT" : "Top Right",
+  "loadingscreentips.midnightconfig.serverLoadingTips" : "Show Tips on Server Loading Screen"
 
 
 

@@ -31,24 +31,26 @@ public abstract class ConnectScreenMixin extends Screen {
 
     @Inject(method = "render", at = @At("TAIL"))
     void drawLoadingTip(MatrixStack matrices, int mouseX, int mouseY, float delta, CallbackInfo ci) {
-        tipTimer += delta;
-        if (tipTimer >= LoadingScreenTipsConfig.changeTime) {
-            randomTip = LoadingScreenTips.getRandomTip();
-            tipTimer = 0;
-        }
-        List<OrderedText> wrappedText = textRenderer.wrapLines(Text.translatable(randomTip), width/3);
-        int textY = (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) ? this.height - this.textRenderer.fontHeight : this.textRenderer.fontHeight;
-        int textX = (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.TOP_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT) ? 0 : (int)(width/1.5f);
-        if (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) {
-            for (int i = wrappedText.size() - 1; i >= 0; i--) {
-                textY = renderTipTextLine$LoadingScreenTips(matrices, wrappedText, textY, textX, i);
+        if (LoadingScreenTipsConfig.serverLoadingTips) {
+            tipTimer += delta;
+            if (tipTimer >= LoadingScreenTipsConfig.changeTime) {
+                randomTip = LoadingScreenTips.getRandomTip();
+                tipTimer = 0;
             }
-            drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
-        } else {
-            drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
-            textY += textRenderer.fontHeight * 1.25f;
-            for (int i = 0; i < wrappedText.size(); i++) {
-                textY = renderTipTextLine$LoadingScreenTips(matrices, wrappedText, textY, textX, i);
+            List<OrderedText> wrappedText = textRenderer.wrapLines(Text.translatable(randomTip), width/3);
+            int textY = (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) ? this.height - this.textRenderer.fontHeight : this.textRenderer.fontHeight;
+            int textX = (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.TOP_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT) ? 0 : (int)(width/1.5f);
+            if (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) {
+                for (int i = wrappedText.size() - 1; i >= 0; i--) {
+                    textY = renderTipTextLine$LoadingScreenTips(matrices, wrappedText, textY, textX, i);
+                }
+                drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
+            } else {
+                drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
+                textY += textRenderer.fontHeight * 1.25f;
+                for (int i = 0; i < wrappedText.size(); i++) {
+                    textY = renderTipTextLine$LoadingScreenTips(matrices, wrappedText, textY, textX, i);
+                }
             }
         }
     }

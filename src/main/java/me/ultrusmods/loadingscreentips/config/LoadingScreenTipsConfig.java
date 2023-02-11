@@ -9,6 +9,9 @@ public class LoadingScreenTipsConfig {
 
     @Entry(min = 0)
     public static float changeTime = 100f;
+
+    @Entry
+    public static boolean serverLoadingTips = true;
     public enum CORNER {
         TOP_LEFT,
         BOTTOM_LEFT,
