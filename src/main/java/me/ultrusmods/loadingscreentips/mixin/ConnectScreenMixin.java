@@ -7,6 +7,7 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -37,16 +38,16 @@ public abstract class ConnectScreenMixin extends Screen {
                 randomTip = LoadingScreenTips.getRandomTip();
                 tipTimer = 0;
             }
-            List<OrderedText> wrappedText = textRenderer.wrapLines(Text.translatable(randomTip), width/3);
+            List<OrderedText> wrappedText = textRenderer.wrapLines(new TranslatableText(randomTip), width/3);
             int textY = (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) ? this.height - this.textRenderer.fontHeight : this.textRenderer.fontHeight;
             int textX = (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.TOP_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT) ? 0 : (int)(width/1.5f);
             if (LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) {
                 for (int i = wrappedText.size() - 1; i >= 0; i--) {
                     textY = renderTipTextLine$LoadingScreenTips(matrices, wrappedText, textY, textX, i);
                 }
-                drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
+                drawTextWithShadow(matrices, this.textRenderer, new TranslatableText("text.loadingscreentips.tip"), textX, textY, 3847130);
             } else {
-                drawTextWithShadow(matrices, this.textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
+                drawTextWithShadow(matrices, this.textRenderer, new TranslatableText("text.loadingscreentips.tip"), textX, textY, 3847130);
                 textY += textRenderer.fontHeight * 1.25f;
                 for (int i = 0; i < wrappedText.size(); i++) {
                     textY = renderTipTextLine$LoadingScreenTips(matrices, wrappedText, textY, textX, i);

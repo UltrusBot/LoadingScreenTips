@@ -1,5 +1,7 @@
 package me.ultrusmods.loadingscreentips;
 
+import eu.midnightdust.lib.config.MidnightConfig;
+import me.ultrusmods.loadingscreentips.config.LoadingScreenTipsConfig;
 import net.fabricmc.api.ModInitializer;
 
 import java.util.ArrayList;
@@ -22,6 +24,6 @@ public class LoadingScreenTips implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
+        MidnightConfig.init(MOD_ID, LoadingScreenTipsConfig.class);
     }
 }
