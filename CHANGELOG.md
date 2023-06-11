@@ -1,1 +1,2 @@
-- Updated to 1.19.4
+- Updated to 1.20
+- Added tips related to 1.20 features

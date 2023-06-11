@@ -86,6 +86,20 @@
     "text.loadingscreentips.leather_boots",
     "text.loadingscreentips.shulker_bullet",
     "text.loadingscreentips.enchantability",
-    "text.loadingscreentips.saturation"
+    "text.loadingscreentips.saturation",
+    "text.loadingscreentips.armor_trim",
+    "text.loadingscreentips.suspicious_sand",
+    "text.loadingscreentips.suspicious_gravel",
+    "text.loadingscreentips.trail_ruins",
+    "text.loadingscreentips.sherds",
+    "text.loadingscreentips.sniffer_moss",
+    "text.loadingscreentips.sniffer_egg",
+    "text.loadingscreentips.sniffing",
+    "text.loadingscreentips.sniffer_breeding",
+    "text.loadingscreentips.camel_breeding",
+    "text.loadingscreentips.camel",
+    "text.loadingscreentips.musical_heads",
+    "text.loadingscreentips.charged_creeper_heads",
+    "text.loadingscreentips.copy_template"
   ]
 }
