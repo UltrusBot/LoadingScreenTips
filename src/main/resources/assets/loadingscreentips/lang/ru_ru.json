@@ -100,7 +100,7 @@
 	"text.loadingscreentips.camel": "Верблюды — отличный способ пересечь пустыню, на них могут ездить два игрока.",
 	"text.loadingscreentips.musical_heads": "Когда вы помещаете голову над нотным блоком, он воспроизводит звуки моба.",
 	"text.loadingscreentips.charged_creeper_heads": "Когда заряженный крипер убивает определённых мобов, они сбрасывают голову.",
-	"text.loadingscreentips.copy_template": "Вы можете дублировать шаблоны отделки, создав их с помощью 7 алмазов и их основного материала.",
+	"text.loadingscreentips.copy_template": "Вы можете дублировать шаблоны отделки брони, с помощью 7 алмазов и их основного материала.",
 	"modmenu.summaryTranslation.loadingscreentips": "Добавляет подсказки на экран загрузки мира.",
 	"modmenu.descriptionTranslation.loadingscreentips": "Добавляет советы на экране загрузки мира.",
 	"loadingscreentips.midnightconfig.title": "Настройка подсказок на экране загрузки",
