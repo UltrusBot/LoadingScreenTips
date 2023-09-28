@@ -52,7 +52,7 @@ publishMods {
         }
     }
     modrinth {
-        projectId = "SYRTX8f4"
+        projectId = "9iE55lp5"
         minecraftVersions.addAll("1.20", "1.20.1")
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         embeds {
