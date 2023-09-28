@@ -1,2 +1,2 @@
-- Updated to 1.20
-- Added tips related to 1.20 features
+- Add Turkish translation (Thanks @Hexasan)
+- Update Russian translation (Thanks @mpustovoi)

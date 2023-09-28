@@ -1,17 +1,15 @@
 plugins {
-    id("fabric-loom") version "0.11.+"
-    id("maven-publish")
-    id("io.github.juuxel.loom-quiltflower") version "1.6.0"
-    id "com.github.breadmoirai.github-release" version "2.4.1"
-    id "com.modrinth.minotaur" version "2.+"
-    id 'me.hypherionmc.cursegradle' version '2.0.1'
+    alias libs.plugins.fabric.loom
+    alias libs.plugins.loom.quiltflower
+    alias libs.plugins.publishing
+    id 'maven-publish'
 }
-apply from: 'https://raw.githubusercontent.com/UltrusBot/GradleScripts/1deb0dd4b4553d7845e21442227abb4c29b17ee8/release.gradle'
-
-archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+base {
+    archivesName = project.archives_base_name
+}
 repositories {
     maven {
         name = "Quilt"
@@ -38,21 +36,37 @@ dependencies {
     include(libs.midnightlib)
     modImplementation(libs.modmenu)
 }
+publishMods {
+    displayName = "Loading Screen Tips v$project.version"
+    file = remapJar.archiveFile
+    changelog = file("$rootDir/CHANGELOG.md").text
+    version = project.version
+    type = STABLE
+    modLoaders.addAll("fabric", "quilt")
+    curseforge {
+        projectId = "527804"
+        minecraftVersions.addAll("1.20", "1.20.1")
+        accessToken = providers.environmentVariable("CF_API_KEY")
+        embeds {
+            slug = "midnightlib"
+        }
+    }
+    modrinth {
+        projectId = "loadingscreentips"
+        minecraftVersions.addAll("1.20", "1.20.1")
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        embeds {
+            slug = "midnightlib"
+        }
+    }
+    github {
+        repository = "UltrusBot/LoadingScreenTips"
+        commitish = "1.20"
+        accessToken = providers.environmentVariable("GH_TOKEN")
+    }
 
-var mod = createModReleaseMetadata(
-        "Loading Screen Tips v$project.version",
-        file("$rootDir/CHANGELOG.md"),
-        ["1.20"],
-        ["fabric", "quilt"],
-        "remapJar",
-        ["remapSourcesJar"],
-        "v${project.version}",
-        false
-)
-modrinthInfo(mod, "loadingscreentips", [], [], [], ["midnightlib"])
-githubInfo(mod, "UltrusBot", "LoadingScreenTips", "1.20")
-curseforgeInfo(mod, "527804", ["midnightlib"])
-
+    dryRun = false
+}
 processResources {
     inputs.property "version", project.version
 
