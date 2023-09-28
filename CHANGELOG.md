@@ -1,2 +1,1 @@
-- Add Turkish translation (Thanks @Hexasan)
-- Update Russian translation (Thanks @mpustovoi)
+- Update to 1.20.2

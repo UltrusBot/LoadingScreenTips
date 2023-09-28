@@ -45,7 +45,7 @@ publishMods {
     modLoaders.addAll("fabric", "quilt")
     curseforge {
         projectId = "527804"
-        minecraftVersions.addAll("1.20", "1.20.1")
+        minecraftVersions.addAll("1.20.2")
         accessToken = providers.environmentVariable("CF_API_KEY")
         embeds {
             slug = "midnightlib"
@@ -53,7 +53,7 @@ publishMods {
     }
     modrinth {
         projectId = "9iE55lp5"
-        minecraftVersions.addAll("1.20", "1.20.1")
+        minecraftVersions.addAll("1.20.2")
         accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         embeds {
             slug = "midnightlib"

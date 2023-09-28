@@ -1,9 +1,10 @@
 package me.ultrusmods.loadingscreentips.config;
 
-import static eu.midnightdust.lib.config.MidnightConfig.Entry;
+import eu.midnightdust.lib.config.MidnightConfig;
+
 
 //TODO At some point: Instead of corners, add a vertical & horizontal offset (percentage based)
-public class LoadingScreenTipsConfig {
+public class LoadingScreenTipsConfig extends MidnightConfig {
     @Entry
     public static CORNER corner = CORNER.BOTTOM_LEFT;
 
