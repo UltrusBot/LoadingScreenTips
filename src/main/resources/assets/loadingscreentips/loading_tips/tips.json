@@ -100,6 +100,8 @@
     "text.loadingscreentips.camel",
     "text.loadingscreentips.musical_heads",
     "text.loadingscreentips.charged_creeper_heads",
-    "text.loadingscreentips.copy_template"
+    "text.loadingscreentips.copy_template",
+    "text.loadingscreentips.decorated_pots_items",
+    "text.loadingscreentips.break_decorated_pots"
   ]
 }

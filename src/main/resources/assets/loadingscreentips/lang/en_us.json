@@ -101,6 +101,8 @@
   "text.loadingscreentips.musical_heads": "When you place a head above a note block, it'll play sounds from the mob.",
   "text.loadingscreentips.charged_creeper_heads": "When a charged creeper kills certain mobs, they will drop their head.",
   "text.loadingscreentips.copy_template": "You can copy template items crafting them with 7 diamonds, and their base material.",
+  "text.loadingscreentips.decorated_pots_items": "You can store items inside decorated pots by clicking them with the item. They can store up to a stack of an item.",
+  "text.loadingscreentips.break_decorated_pots": "Hey! Listen! You can smash decorated pots with projectiles like arrows.",
 
   "modmenu.summaryTranslation.loadingscreentips": "Adds loading tips to the world loading screen.",
   "modmenu.descriptionTranslation.loadingscreentips": "Adds loading tips to the world loading screen.",
