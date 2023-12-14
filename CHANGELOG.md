@@ -1,2 +1,1 @@
-- Update to 1.20.4
-- Add new tips
+- Fix bug where replace was broken
