@@ -1,13 +1,12 @@
 [versions]
-minecraft = "1.21"
-yarn = "1.21+build.9"
-fabric_loader = "0.15.11"
-fabric_api = "0.100.7+1.21"
-midnightlib = "1.5.7-fabric"
-modmenu = "11.0.1"
+minecraft = "1.21.11"
+yarn = "1.21.11+build.5"
+fabric_loader = "0.19.2"
+fabric_api = "0.141.3+1.21.11"
+midnightlib = "1.9.2+1.21.11-fabric"
+modmenu = "17.0.0"
 
-fabric_loom = "1.7-SNAPSHOT"
-loom_quiltflower = "1.6.0"
+fabric_loom = "1.16-SNAPSHOT"
 publishing = "0.6.2"
 
 [libraries]
@@ -24,5 +23,4 @@ modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 [plugins]
 #     id "me.modmuss50.mod-publish-plugin" version "0.3.5"
 fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }
-loom_quiltflower = { id = "io.github.juuxel.loom-quiltflower", version.ref = "loom_quiltflower" }
 publishing = { id = "me.modmuss50.mod-publish-plugin", version.ref = "publishing" }

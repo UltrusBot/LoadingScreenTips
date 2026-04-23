@@ -14,7 +14,7 @@ public class LoadingScreenTips implements ModInitializer {
     public static final Random RANDOM_TIP = new Random();
 
     public static String getRandomTip() {
-        if (TIPS.size() > 0) {
+        if (!TIPS.isEmpty()) {
             return TIPS.get(RANDOM_TIP.nextInt(TIPS.size()));
         } else {
             return "";

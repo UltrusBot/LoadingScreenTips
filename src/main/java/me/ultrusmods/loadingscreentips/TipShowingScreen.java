@@ -23,9 +23,9 @@ public interface TipShowingScreen {
             for (int i = wrappedText.size() - 1; i >= 0; i--) {
                 textY = renderTipTextLine(graphics, wrappedText, textY, textX, i, textRenderer);
             }
-            graphics.drawTextWithShadow(textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
+            graphics.drawTextWithShadow(textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, -12930086);
         } else {
-            graphics.drawTextWithShadow(textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, 3847130);
+            graphics.drawTextWithShadow(textRenderer, Text.translatable("text.loadingscreentips.tip"), textX, textY, -12930086);
             textY += textRenderer.fontHeight * 1.25f;
             for (int i = 0; i < wrappedText.size(); i++) {
                 textY = renderTipTextLine(graphics, wrappedText, textY, textX, i, textRenderer);
@@ -35,7 +35,7 @@ public interface TipShowingScreen {
 
     private int renderTipTextLine(DrawContext graphics, List<OrderedText> wrappedText, int textY, int textX, int i, TextRenderer textRenderer) {
         OrderedText orderedText = wrappedText.get(i);
-        graphics.drawTextWithShadow(textRenderer, orderedText, textX, textY, 16777215);
+        graphics.drawTextWithShadow(textRenderer, orderedText, textX, textY, -1);
         textY -= ((LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_LEFT || LoadingScreenTipsConfig.corner == LoadingScreenTipsConfig.CORNER.BOTTOM_RIGHT) ? 1 : -1 ) * textRenderer.fontHeight * 1.25f;
         return textY;
     }

@@ -1,3 +1,1 @@
-- Update Turkish Localization#21 (Thanks @Hexasan)
-- Added German language support + fixed error#18 (Thanks @Hinterhaeltiger)
-- Create pt_br.json#16 (Thanks @Alstin112)
+- Update to 1.21.11 and add some tips for last few versions.

@@ -7,7 +7,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.world.LevelLoadingScreen;
-import net.minecraft.server.WorldGenerationProgressTracker;
+import net.minecraft.client.world.ClientChunkLoadProgress;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -28,7 +28,7 @@ public abstract class LevelLoadingScreenMixin extends Screen implements TipShowi
     float tipTimer = 0f;
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    void pickRandomTip(WorldGenerationProgressTracker worldGenerationProgressTracker, CallbackInfo ci) {
+    void pickRandomTip(ClientChunkLoadProgress clientChunkLoadProgress, LevelLoadingScreen.WorldEntryReason worldEntryReason, CallbackInfo ci) {
         randomTip = LoadingScreenTips.getRandomTip();
     }
 

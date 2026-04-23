@@ -118,6 +118,12 @@
     "text.loadingscreentips.mace_wither",
     "text.loadingscreentips.mace_falldamage",
     "text.loadingscreentips.breeze_projectile",
-    "text.loadingscreentips.trial_spawner_blocks"
+    "text.loadingscreentips.trial_spawner_blocks",
+    "text.loadingscreentips.tip.spear",
+    "text.loadingscreentips.tip.copper_golem",
+    "text.loadingscreentips.tip.copper_golem_axe",
+    "text.loadingscreentips.tip.shelves",
+    "text.loadingscreentips.tip.dried_ghast",
+    "text.loadingscreentips.tip.nautilus"
   ]
 }

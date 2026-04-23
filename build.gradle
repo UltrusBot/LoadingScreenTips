@@ -44,7 +44,7 @@ publishMods {
     modLoaders.addAll("fabric", "quilt")
     curseforge {
         projectId = "527804"
-        minecraftVersions.addAll("1.21")
+        minecraftVersions.addAll("1.21.11")
         accessToken = providers.gradleProperty("CF_API_KEY")
         embeds {
             slug = "midnightlib"
@@ -52,7 +52,7 @@ publishMods {
     }
     modrinth {
         projectId = "9iE55lp5"
-        minecraftVersions.addAll("1.21")
+        minecraftVersions.addAll("1.21.11")
         accessToken = providers.gradleProperty("MODRINTH_TOKEN")
         embeds {
             slug = "midnightlib"
@@ -60,7 +60,7 @@ publishMods {
     }
     github {
         repository = "UltrusBot/LoadingScreenTips"
-        commitish = "1.20"
+        commitish = "1.21.11"
         accessToken = providers.gradleProperty("GH_TOKEN")
     }
 

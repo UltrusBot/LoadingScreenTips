@@ -119,6 +119,12 @@
   "text.loadingscreentips.mace_falldamage": "If you are falling and attack a mob with the mace, your fall damage will be negated.",
   "text.loadingscreentips.breeze_projectile": "The wind charge affects many blocks, such flipping doors, pressing buttons, and ringing bells.",
   "text.loadingscreentips.trial_spawner_blocks": "You can tell which mob spawns in trial spawners based on blocks in the room, which are associated with the mob.",
+  "text.loadingscreentips.tip.spear": "Spears deal more damage as you move quicker, try using one on a mount.",
+  "text.loadingscreentips.tip.copper_golem": "Copper Golems can sort items into chests, but they eventually oxidize into statues.",
+  "text.loadingscreentips.tip.copper_golem_axe": "Try using an axe on an oxidized copper golem, it may just bring it back to life!",
+  "text.loadingscreentips.tip.shelves": "Shelves can store up to 3 item stacks, and powered Shelves swap with your hotbar, even multiple connected together for a full hotbar.",
+  "text.loadingscreentips.tip.dried_ghast": "Try putting a dried ghast in water, it might make it happy and give you a ride.",
+  "text.loadingscreentips.tip.nautilus": "Try taming a nautilus with pufferfish, it's a good underwater mount.",
 
   "modmenu.summaryTranslation.loadingscreentips": "Adds loading tips to the world loading screen.",
   "modmenu.descriptionTranslation.loadingscreentips": "Adds loading tips to the world loading screen.",

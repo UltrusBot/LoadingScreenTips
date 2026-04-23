@@ -13,6 +13,6 @@ public class LoadingTipsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new LoadingTipsLoader());
+        ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(LoadingTipsLoader.INSTANCE);
     }
 }
